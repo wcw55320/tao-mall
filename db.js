@@ -1,15 +1,15 @@
-const mongoose = require('mongoose')
+let mongoose = require("mongoose");
+
 let config = require("./config");
-//连接数据库
-mongoose.connect("mongodb://127.0.0.1:27017/" + config.DB);
-const db = mongoose.connection;
 
-db.on('error', err => {
-    if (err) {
-        console.log(err)
-    }
-});
+mongoose.connect("mongodb://localhost/" + config.DB, {useNewUrlParser: true})
 
-db.once('open', function () {
-    console.log('连接mongodb成功！');
-});
+let connection = mongoose.connection;
+
+connection.on("error", err => {
+    console.log("数据库连接失败:" + err.toString())
+})
+
+connection.once("open", () => {
+    console.log("连接成功")
+})
