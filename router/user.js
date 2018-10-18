@@ -26,11 +26,10 @@ router.delete('/:username', async (req, res) => {
     res.success()
 });
 
-router.post("/login", async (request, response) => {
+router.post("/login", async (req, res) => {
 
-    let token = await userService.login(request.body);
+    let token = await userService.login(req.body);
 
-    response.success(token);
-
+    res.success(token);
 });
 
