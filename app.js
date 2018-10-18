@@ -20,7 +20,8 @@ app.use(morgan("combined"));
 app.use(require("./middleware/res_md"));
 // 注册路由
 app.use("/user", require('./router/user'));
-
+app.use("/category", require('./router/category'));
+app.use("/product", require('./router/product'));
 //解析json数据
 app.use(express.json());
 
