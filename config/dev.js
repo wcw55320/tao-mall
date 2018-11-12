@@ -2,7 +2,8 @@
 module.exports = {
     PORT: 8000,
     DB: "product-manager-test",
-    PAGE_SIZE: 2
+    PAGE_SIZE: 2,
+    TOKEN_KEY: "product-manager-test",
 };
 
 

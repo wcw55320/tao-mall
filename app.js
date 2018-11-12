@@ -22,6 +22,7 @@ app.use(require("./middleware/res_md"));
 app.use("/user", require('./router/user'));
 app.use("/category", require('./router/category'));
 app.use("/product", require('./router/product'));
+app.use("/order", require('./router/order'));
 //解析json数据
 app.use(express.json());
 

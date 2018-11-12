@@ -35,3 +35,5 @@ async function testLogin() {
     let res = await UserService.login(user);
     console.log(res)
 }
+
+testDeleteUsername()

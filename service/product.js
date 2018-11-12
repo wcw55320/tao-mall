@@ -5,7 +5,7 @@ let Product = require("../model/product");
 //根据ID查询商品
 async function findById(id) {
 
-    return await Product.fondOne({_id: id})
+    return await Product.findOne({_id: id})
 }
 
 /**
