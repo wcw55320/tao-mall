@@ -46,7 +46,7 @@ router.put("/:id", async (req, res) => {
  *  当前页面显示多少条数据 : 10
  * url : GET ,http://localhost:8080/product?page=2
  * 需要指定默认查询的是第一页
- * @returns {Promise<void>}
+ * @returns {Promise<void>} /
  */
 
 router.get("/", async (req, res) => {
