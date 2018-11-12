@@ -40,7 +40,7 @@ async function deleteById(id) {
     }
 
     // { n: 1, nModified: 1, ok: 1 }
-    result = await Product.deleteOne({_id: id})
+    result = await Product.deleteOne({_id: id});
     if (result.n < 1) {
         throw Error("删除商品失败")
     }
